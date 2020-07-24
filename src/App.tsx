@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button } from 'antd'
+import { Provider } from 'react-redux'
+import store from './store'
+import RepositoryList from './components/RepositoryList';
 
 function App() {
   return (
-    <div className="App">
-      <Button type="primary">Start</Button>
-    </div>
-
+    <Provider store={store}>
+      <RepositoryList />
+    </Provider>
   );
 }
 
